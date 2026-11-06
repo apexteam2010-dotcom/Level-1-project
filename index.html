@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Raenest</title>
-
+ 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-    <!-- all the styling lives in style.css -->
     <link rel="stylesheet" href="Project.css">
-
-    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-
+ 
 <!-- ================= NAVBAR ================= -->
 <header class="site-header">
     <nav class="navbar">
-
-        <!-- logo: small icon picture + the word "raenest" -->
+ 
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+ 
         <a class="brand" href="https://www.raenest.com/">
             <img class="brand-icon" src="Screenshot 2026-10-28 152017.png" alt="">
             <span class="brand-text">raenest</span>
         </a>
-
-        <!-- Personal / Business pill -->
+ 
+        <label class="menu-button" for="menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </label>
+ 
         <div class="switch">
             <a class="switch-link active" href="https://www.raenest.com/">Personal</a>
             <a class="switch-link" href="https://www.raenest.com/business/home">Business</a>
         </div>
-
+ 
         <ul class="nav-links">
-
+ 
             <!-- Products -->
             <li class="has-dropdown">
                 <a class="nav-link" href="#">Products</a>
@@ -110,7 +111,7 @@
                     <li class="drop-divider"></li>
                 </ul>
             </li>
-
+ 
             <!-- Earn -->
             <li class="has-dropdown">
                 <a class="nav-link" href="#">Earn</a>
@@ -145,19 +146,17 @@
                     <li class="drop-divider"></li>
                 </ul>
             </li>
-
+ 
             <li>
                 <a class="nav-link" href="https://www.raenest.com/blog">News & Blog</a>
             </li>
         </ul>
-
-        <!-- right side: language, Login and Create an account  -->
-
+ 
+        <!-- Language, Login and Create an account -->
         <div class="actions">
-
+ 
             <div class="has-dropdown lang-wrap">
                 <a class="language" href="https://www.raenest.com/">
-
                     <svg class="flag" viewBox="0 0 60 30" preserveAspectRatio="none">
                         <rect width="60" height="30" fill="#012169"/>
                         <path d="M0 0L60 30M60 0L0 30" stroke="white" stroke-width="6"/>
@@ -169,43 +168,44 @@
                         <path d="M3 5.5l5 5 5-5"/>
                     </svg>
                 </a>
-
+ 
                 <ul class="dropdown dropdown-lang">
-                <li><a class="lang-item current" href="https://www.raenest.com/">English</a></li>
-                <li><a class="lang-item" href="https://www.raenest.com/es-ar">Spanish (Argentina)</a></li>
-                <li><a class="lang-item" href="https://www.raenest.com/fr">French</a></li>
-                <li><a class="lang-item" href="https://www.raenest.com/pt-br">Portuguese (Brazil)</a></li>
-                <li><a class="lang-item" href="https://www.raenest.com/es-co">Spanish (Colombia)</a></li>
+                    <li><a class="lang-item current" href="https://www.raenest.com/">English</a></li>
+                    <li><a class="lang-item" href="https://www.raenest.com/es-ar">Spanish (Argentina)</a></li>
+                    <li><a class="lang-item" href="https://www.raenest.com/fr">French</a></li>
+                    <li><a class="lang-item" href="https://www.raenest.com/pt-br">Portuguese (Brazil)</a></li>
+                    <li><a class="lang-item" href="https://www.raenest.com/es-co">Spanish (Colombia)</a></li>
                 </ul>
             </div>
-
+ 
             <a class="btn btn-outline" href="https://app.raenest.com/">Login</a>
             <a class="btn btn-solid" href="https://app.raenest.com/register">Create an account</a>
         </div>
-
+ 
     </nav>
 </header>
-
-<!-- ================= HERO ================= -->
+ 
 <main>
+ 
+    <!-- ================= HERO ================= -->
     <section class="hero">
-
+ 
         <div class="hero-content">
-
+ 
             <div class="flag-marquee">
                 <div class="flag-track">
                     <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fd3978144edecc8948f7ff_logo%20marquee.svg" alt="">
                     <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fd3978144edecc8948f7ff_logo%20marquee.svg" alt="">
                 </div>
             </div>
-
+ 
             <h1 class="hero-title">Receive and spend money globally</h1>
-
+ 
             <p class="hero-text">Get paid from anywhere in global currencies and do more with money—spend, earn on savings, and invest.</p>
-            
+ 
             <div class="hero-actions">
                 <a class="hero-btn hero-btn-primary" href="https://app.raenest.com/register">Create an account</a>
-
+ 
                 <div class="download">
                     <a class="hero-btn hero-btn-store" href="https://referral.raenest.com/WzbV/f22cg6nd">
                         <span class="store-icons">
@@ -215,21 +215,23 @@
                         </span>
                         <span>Download app</span>
                     </a>
-
+ 
                     <div class="qr-card">
                         <p class="qr-title">Scan the QR code below<br>to download the app</p>
                         <img class="qr-img" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/697bfa5ae287c5ee4c604de9_176il45u_qr_code.png" alt="QR code to download the Raenest app">
                     </div>
                 </div>
             </div>
-
-
+ 
+        </div>
+ 
         <img class="hero-photo" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fd3b6d48813d28793babef_Hero%20img%20personal.webp" alt="">
         <img class="hero-ui" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dd9af140daebeba53a0da1_hero%20UI%20elements-1.png" alt="">
-
+ 
     </section>
-
-     <section class="investors">
+ 
+    <!-- ================= INVESTORS ================= -->
+    <section class="investors">
         <p class="investors-title">Backed and trusted by the best in fintech and venture capital</p>
         <div class="investors-logos">
             <img class="logo-qed" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67da66e25339e051897888ee_qed.png" alt="QED Investors">
@@ -240,16 +242,14 @@
             <img class="logo-norrsken" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6970a42908ffd82bfbc701b1_61f171f1e7e4fd0fe075a36a_n22_logo_2-p-500%20%282%29%201%20%281%29.png" alt="Norrsken22">
         </div>
     </section>
-
-                <!-- REVIEW SECTION -->
-
+ 
+    <!-- ================= REVIEWS ================= -->
     <section class="reviews">
         <h2 class="reviews-title">Over 1,000,000 people love us. You will too.</h2>
         <p class="reviews-sub">Hear some of them yourself.</p>
-
-
+ 
         <div class="reviews-grid">
-
+ 
             <!-- Kevin -->
             <div class="review-card">
                 <h3 class="review-title">Unimaginably Excellent</h3>
@@ -259,20 +259,17 @@
                     <span>Kevin</span>
                 </div>
             </div>
-
-            <!-- the video card in the middle -->
+ 
+            <!-- Video -->
             <div class="review-video" id="video-card">
-
-                <!-- the photo with the round play button. Clicking it opens the player below -->
+ 
                 <div class="video-box">
                     <a class="video-poster" href="#video-player">
                         <img src="https://i.ytimg.com/vi/g3D_YGKjyms/hq720.jpg" alt="Watch the Raenest customer story">
                         <span class="play-button"></span>
                     </a>
                 </div>
-
-                <!-- To stay hidden until the play button is clicked, the x closes it -->
-
+ 
                 <div class="video-popup" id="video-player">
                     <a class="video-close" href="#video-card">&times;</a>
                     <iframe src="https://www.youtube.com/embed/g3D_YGKjyms"
@@ -281,13 +278,13 @@
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen></iframe>
                 </div>
-
+ 
                 <div class="review-author">
                     <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6807d11985d46c59f5491fde_NG.webp" alt="">
                     <span>Moyinoluwa</span>
                 </div>
             </div>
-
+ 
             <!-- Banji -->
             <div class="review-card">
                 <h3 class="review-title">Best exchange rates</h3>
@@ -297,7 +294,7 @@
                     <span>Banji</span>
                 </div>
             </div>
-
+ 
             <!-- Theresa -->
             <div class="review-card">
                 <h3 class="review-title">Best in Class Support</h3>
@@ -307,7 +304,7 @@
                     <span>Theresa</span>
                 </div>
             </div>
-
+ 
             <!-- Blessing -->
             <div class="review-card">
                 <h3 class="review-title">Seamless for Transfers</h3>
@@ -317,21 +314,19 @@
                     <span>Blessing</span>
                 </div>
             </div>
-
+ 
         </div>
-
-        <!-- the rating pill under the cards (the stars picture comes from the Raenest website) -->
+ 
         <div class="store-rating">
             <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67da765d766109f2885b3e8b_store-rating.png" alt="Rating stars">
             <span>4.6 Apple store, Play store</span>
         </div>
     </section>
-
-    <!-- STACKED CARDS (Receive, Global accounts, Cards, Send, Earn) -->
-
+ 
+    <!-- ================= STACKED CARDS ================= -->
     <section class="slides">
  
-        <!-- ----- Receive money ----- -->
+        <!-- Receive money -->
         <div class="slide slide-receive">
             <img class="slide-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6970bf1187dee404aee42a83_Raenest_India_2.png" alt="">
             <span class="slide-label">Receive money</span>
@@ -342,8 +337,8 @@
                 <a class="slide-link" href="https://www.raenest.com/receive-money">Learn more <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dff200"/><path d="M7 12h10M13 8l4 4-4 4" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </div>
         </div>
-
-
+ 
+        <!-- Global accounts -->
         <div class="slide slide-global">
             <img class="slide-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67da657539515e002e5ccd03_global%20acc%20slider2%20img.png" alt="">
             <span class="slide-label">Global accounts</span>
@@ -354,8 +349,8 @@
                 <a class="slide-link" href="https://www.raenest.com/global-accounts">Learn more <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dff200"/><path d="M7 12h10M13 8l4 4-4 4" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </div>
         </div>
-
-              <!-- Slide cards -->
+ 
+        <!-- Cards -->
         <div class="slide slide-cards">
             <img class="slide-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/69d79ee49c0d8b67d4ad1a64_newvisacard.jpg" alt="">
             <span class="slide-label">Cards</span>
@@ -367,7 +362,7 @@
             </div>
         </div>
  
-           <!---- Send money ----->
+        <!-- Send money -->
         <div class="slide slide-send">
             <img class="slide-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/69735a6bd934d9d0ad410999_Raenest_55.png" alt="">
             <span class="slide-label">Send money</span>
@@ -379,7 +374,7 @@
             </div>
         </div>
  
-        <!-- ----- Earn ----- -->
+        <!-- Earn -->
         <div class="slide slide-earn">
             <img class="slide-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6973511d15f05ffbebd9d4f1_Raenest_Philipines%201.png" alt="">
             <span class="slide-label">Earn</span>
@@ -390,8 +385,8 @@
             </div>
         </div>
     </section>
-
-
+ 
+    <!-- ================= RAENEST FOR EVERYONE ================= -->
     <section class="everyone">
         <input type="radio" name="who" id="who1" checked>
         <input type="radio" name="who" id="who2">
@@ -441,7 +436,7 @@
         </div>
     </section>
  
-    <!-- == RAENEST FOR BUSINESS -->
+    <!-- ================= RAENEST FOR BUSINESS ================= -->
     <section class="business">
         <div class="business-card">
             <img class="business-bg" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67e452702a7e4919a57c2a10_Raenest%20for%20business%20cta%20bg.svg" alt="">
@@ -452,60 +447,50 @@
             </div>
         </div>
     </section>
-
-     <!--  YOUR MONEY, WHEREVER YOU NEED IT -->
+ 
+    <!-- ================= YOUR MONEY, WHEREVER YOU NEED IT ================= -->
     <section class="everywhere">
  
         <h2 class="everywhere-title">Your Money,<br>Wherever You Need It</h2>
         <p class="everywhere-text">Send and withdraw funds to bank accounts and mobile money using your Raenest account, seamlessly connecting with PayPal, Payoneer, Wise, Mastercard, Revolut and many more.</p>
  
-        <!-- phone on the pink stand, plus two small cards floating next to it  -->
-
         <img class="phone-mockup" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/682f5419c71336ffd4733404_Raenest%20Standing%20mockup%201.webp" alt="Raenest app on a phone">
         <img class="float-card float-balance" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fe71a81bd4684160470954_money%20everywhere1.svg" alt="">
         <img class="float-card float-send" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fe71652abb49bf3261e1db_money%20everywhere2.svg" alt="">
-
+ 
     </section>
  
-    <!-- LOGOS + THREE PHOTO CARDS  -->
+    <!-- ================= LOGOS + THREE PHOTO CARDS ================= -->
     <section class="creators">
  
-        <!-- logos on the left (2 columns x 3 rows) -->
-
         <div class="logos logos-left">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf00f633246ea915879_Creator-company%20logos.png" alt="peopleperhour">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf052cb35311f420225_Creator-company%20logos-1.png" alt="TikTok">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf022e80fd8a66d3653_Creator-company%20logos-2.png" alt="AliExpress">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0cf673574048ae41c_Creator-company%20logos-3.png" alt="Meta">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0763643399f2bbbe7_Creator-company%20logos-4.png" alt="Upwork">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0763643399f2bbbfc_Creator-company%20logos-5.png" alt="Amazon Kindle">
-        </div>
-
-
-        <div class="logos logos-right">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e394bf57ab612274344_creator%20company%20logo-%20right%2006.png" alt="Google Ads">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39f5ac94f893e83220_creator%20company%20logo-%20right%2005.png" alt="YouTube">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e392598c0616673cb3e_creator%20company%20logo-%20right%2003.png" alt="Fiverr">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39b0a720d79dbbdd76_creator%20company%20logo-%20right%2004.png" alt="Toptal">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39ec187bfc99953077_creator%20company%20logo-%20right%2002.png" alt="Freelancer">
-                <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e390ab7c383a4149381_creator%20company%20logo-%20right%2001.png" alt="PayPal">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf00f633246ea915879_Creator-company%20logos.png" alt="peopleperhour">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf052cb35311f420225_Creator-company%20logos-1.png" alt="TikTok">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf022e80fd8a66d3653_Creator-company%20logos-2.png" alt="AliExpress">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0cf673574048ae41c_Creator-company%20logos-3.png" alt="Meta">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0763643399f2bbbe7_Creator-company%20logos-4.png" alt="Upwork">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4bf0763643399f2bbbfc_Creator-company%20logos-5.png" alt="Amazon Kindle">
         </div>
  
-        <!-- the three photo cards in the middle. When the mouse is over them they spread out -->
-
-
+        <div class="logos logos-right">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e394bf57ab612274344_creator%20company%20logo-%20right%2006.png" alt="Google Ads">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39f5ac94f893e83220_creator%20company%20logo-%20right%2005.png" alt="YouTube">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e392598c0616673cb3e_creator%20company%20logo-%20right%2003.png" alt="Fiverr">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39b0a720d79dbbdd76_creator%20company%20logo-%20right%2004.png" alt="Toptal">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e39ec187bfc99953077_creator%20company%20logo-%20right%2002.png" alt="Freelancer">
+            <img src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67dc4e390ab7c383a4149381_creator%20company%20logo-%20right%2001.png" alt="PayPal">
+        </div>
+ 
         <div class="fan">
             <img class="fan-card fan-back" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6819d4702c0fd378b392551c_Image%20back.webp" alt="">
             <img class="fan-card fan-middle" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fe1f188cca21f55a1c3e34_Image%20middle.webp" alt="">
             <img class="fan-card fan-front" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67fe1f1810c4b7073c1eb0fd_image%20front.webp" alt="">
         </div>
     </section>
-
-    <!-- ROTATING WORDS (Designers, Marketers...) -->
+ 
+    <!-- ================= ROTATING WORDS ================= -->
     <section class="roles">
-
-        <!-- a small window that shows ONE word. The list inside slides up behind it.
-             The first word is repeated at the end so the loop has no jump -->
+ 
         <div class="role-window">
             <ul class="role-list">
                 <li>Creators</li>
@@ -517,23 +502,21 @@
                 <li>Creators</li>
             </ul>
         </div>
-
+ 
         <p class="roles-text">use Raenest to receive and manage their money — save, spend, and invest.</p>
         <p class="roles-sub">At Upwork, Andela, Fiver, Toptal, Contra, YouTube, Freelancer, Peopleperhour, Deel and anywhere you need to get paid.</p>
     </section>
-
-        <!-- GET PAID GLOBALLY IN 3 EASY STEPS -->
-
+ 
+    <!-- ================= GET PAID GLOBALLY IN 3 EASY STEPS ================= -->
     <section class="steps">
         <h2 class="steps-title">Get Paid Globally in 3 Easy Steps</h2>
-
+ 
         <div class="steps-grid">
-
-            <!-- step 1 -->
+ 
+            <!-- Step 1 -->
             <div class="step-card">
                 <div class="step-top">
                     <img class="step-pic" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67deaf884b0b9419f973baef_Paid%20Globally%20img.png" alt="">
-                    <!-- the dark tab in the corner (a small drawing) with the number on top -->
                     <div class="step-badge">
                         <svg viewBox="0 0 79 77"><path d="M0 0H79V77C69 65 60 57 51 57C36 57 22 47 22 30C22 12 14 0 0 0Z"/></svg>
                         <span>1</span>
@@ -544,8 +527,8 @@
                     <p class="step-text">Create your account in minutes—input legal name, strong password, and confirm verification code.</p>
                 </div>
             </div>
-
-            <!-- step 2 -->
+ 
+            <!-- Step 2 -->
             <div class="step-card">
                 <div class="step-top">
                     <img class="step-pic" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/67deaf882eff45c1fa839dbd_Paid%20Globally%20img%202.png" alt="">
@@ -559,8 +542,8 @@
                     <p class="step-text">A quick and secure verification process. This is important to help you keep your account safe.</p>
                 </div>
             </div>
-
-            <!-- step 3 -->
+ 
+            <!-- Step 3 -->
             <div class="step-card">
                 <div class="step-top">
                     <img class="step-pic step-pic-3" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/680a8ffc246faf7a360ef5bf_3%20steps%20personal%203rd.webp" alt="">
@@ -574,15 +557,14 @@
                     <p class="step-text">Start receiving payments, saving in foreign currencies, and spending globally.</p>
                 </div>
             </div>
-
+ 
         </div>
     </section>
-
-    <!-- THE LATEST FROM RAENEST (blog cards + newsletter) =-->
-
+ 
+    <!-- ================= THE LATEST FROM RAENEST (blog + newsletter + press) ================= -->
     <section class="blog">
         <h2 class="blog-heading">The latest from Raenest: Tips, News and Updates</h2>
-
+ 
         <div class="blog-grid">
             <a class="blog-card" href="https://www.raenest.com/blog/fixed-savings-in-nigeria-how-to-save-your-naira-and-earn-interest">
                 <img class="blog-pic" src="https://cdn.prod.website-files.com/67d8614570bbea9ea5932686/6ae4f61d4a1a3af597a6256b_How%20to%20Save%20Naira%20and%20Earn%20Interest.jpg" alt="">
@@ -591,9 +573,9 @@
                     <path class="notch-fill" d="M77.5 -39A38.5 38.5 0 0 1 39.5 0H20A20 20 0 0 0 0 20V42A36 36 0 0 1 -36 78V80H80V-39Z"/>
                 </svg>
                 <span class="blog-arrow">
-    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    <!-- <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg> -->
-</span>
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+            </a>
             <a class="blog-card" href="https://www.raenest.com/blog/how-to-invest-in-the-nasdaq-100-from-nigeria">
                 <img class="blog-pic" src="https://cdn.prod.website-files.com/67d8614570bbea9ea5932686/6ae4ef797a42298c19cf36ce_Invest%20in%20Nasdaq%20100.jpg" alt="">
                 <h3 class="blog-title">How to Invest in the Nasdaq 100 From Nigeria</h3>
@@ -601,9 +583,8 @@
                     <path class="notch-fill" d="M77.5 -39A38.5 38.5 0 0 1 39.5 0H20A20 20 0 0 0 0 20V42A36 36 0 0 1 -36 78V80H80V-39Z"/>
                 </svg>
                 <span class="blog-arrow">
-    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    <!-- <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg> -->
-</span>
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
             </a>
             <a class="blog-card" href="https://www.raenest.com/blog/raenest-one-platform-to-receive-send-spend-save-and-grow-your-money">
                 <img class="blog-pic" src="https://cdn.prod.website-files.com/67d8614570bbea9ea5932686/6ae46b37be3b06195dac5859_New%20Features%20Banner.jpg" alt="">
@@ -612,15 +593,14 @@
                     <path class="notch-fill" d="M77.5 -39A38.5 38.5 0 0 1 39.5 0H20A20 20 0 0 0 0 20V42A36 36 0 0 1 -36 78V80H80V-39Z"/>
                 </svg>
                 <span class="blog-arrow">
-    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    <!-- <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg> -->
-</span>
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
             </a>
         </div>
-
+ 
         <div class="blog-line"></div>
-
-        <!-- newsletter: heading on the left, email box and button on the right -->
+ 
+        <!-- Newsletter -->
         <div class="newsletter">
             <h3 class="newsletter-title">Get the latest update straight into your mail</h3>
             <form class="newsletter-form" action="#">
@@ -628,7 +608,7 @@
                 <button class="newsletter-btn" type="submit">Join newsletter</button>
             </form>
         </div>
-
+ 
         <!-- Raenest in the News -->
         <h2 class="press-heading">Raenest in the News!</h2>
         <div class="press-logos">
@@ -639,11 +619,11 @@
             <img class="logo-finextra" src="https://cdn.prod.website-files.com/67d85bdb392a92fa03e2f524/6970ab3af79887faec24d46a_finextra-logo.png" alt="Finextra">
         </div>
     </section>
-
-    <!--  FREQUENTLY ASKED QUESTIONS---- Each question is a <details> box: click it and it opens, click again and it closes. -->
+ 
+    <!-- ================= FREQUENTLY ASKED QUESTIONS ================= -->
     <section class="faq">
         <h2 class="faq-title">Frequently asked questions</h2>
-
+ 
         <div class="faq-list">
             <details class="faq-item" open>
                 <summary>Is Raenest a bank?</summary>
@@ -678,123 +658,114 @@
             </details>
         </div>
     </section>
-
-    <!--  FOOTER SECTION -->
-<footer class="footer">
  
-    <!-- the soft purple-to-peach curve in the bottom right (a drawing with colour gradients) -->
-    <svg class="footer-wave" viewBox="0 280 1894 900" preserveAspectRatio="none">
-        <defs>
-            <linearGradient id="waveColour" gradientUnits="userSpaceOnUse" x1="1894" y1="321" x2="1821" y2="683">
-                <stop offset="0"     stop-color="#e9c3c8"/>
-                <stop offset="0.133" stop-color="#a78ab6"/>
-                <stop offset="0.239" stop-color="#7d66a8"/>
-                <stop offset="0.337" stop-color="#5b4a9a"/>
-                <stop offset="0.47"  stop-color="#362b85"/>
-                <stop offset="0.602" stop-color="#281f6a"/>
-                <stop offset="0.735" stop-color="#1d174f"/>
-                <stop offset="0.867" stop-color="#130f33"/>
-                <stop offset="1"     stop-color="#080615"/>
-            </linearGradient>
-            <linearGradient id="waveGlow" gradientUnits="userSpaceOnUse" x1="500" y1="468" x2="521" y2="591">
-                <stop offset="0" stop-color="#1e1853" stop-opacity="1"/>
-                <stop offset="1" stop-color="#1e1853" stop-opacity="0"/>
-            </linearGradient>
-        </defs>
-        <path d="M0 551L1136 362C1300 335 1500 300 1700 287C1780 282 1840 287 1894 295V1180H0Z" fill="url(#waveColour)"/>
-        <path d="M0 551L1000 385V515L0 681Z" fill="url(#waveGlow)"/>
-    </svg>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
  
-    <div class="footer-inner">
+        <svg class="footer-wave" viewBox="0 280 1894 900" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveColour" gradientUnits="userSpaceOnUse" x1="1894" y1="321" x2="1821" y2="683">
+                    <stop offset="0"     stop-color="#e9c3c8"/>
+                    <stop offset="0.133" stop-color="#a78ab6"/>
+                    <stop offset="0.239" stop-color="#7d66a8"/>
+                    <stop offset="0.337" stop-color="#5b4a9a"/>
+                    <stop offset="0.47"  stop-color="#362b85"/>
+                    <stop offset="0.602" stop-color="#281f6a"/>
+                    <stop offset="0.735" stop-color="#1d174f"/>
+                    <stop offset="0.867" stop-color="#130f33"/>
+                    <stop offset="1"     stop-color="#080615"/>
+                </linearGradient>
+                <linearGradient id="waveGlow" gradientUnits="userSpaceOnUse" x1="500" y1="468" x2="521" y2="591">
+                    <stop offset="0" stop-color="#1e1853" stop-opacity="1"/>
+                    <stop offset="1" stop-color="#1e1853" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+            <path d="M0 551L1136 362C1300 335 1500 300 1700 287C1780 282 1840 287 1894 295V1180H0Z" fill="url(#waveColour)"/>
+            <path d="M0 551L1000 385V515L0 681Z" fill="url(#waveGlow)"/>
+        </svg>
  
-        <!-- top part: logo, address and social icons on the left, link columns on the right -->
-        <div class="footer-top">
+        <div class="footer-inner">
  
-            <div class="footer-brand">
-                <a class="footer-logo" href="https://www.raenest.com/">
-    <img class="footer-logo-img" src="https://cdn.corenexis.com/f/ehOaKZkN.png" alt="Raenest">
-</a>
-                <p class="footer-address">7460 Warren Parkway, Suite 100,<br>Frisco, TX 75034, US</p>
+            <div class="footer-top">
  
-                <div class="footer-social">
-                    <!-- YouTube -->
-                    <a href="https://youtube.com/@raenest?si=fpQTBa5Ywj5ezgIv"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/></svg></a>
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/raenestapp/"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="white" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2"/></svg></a>
-                    <!-- X (Twitter) -->
-                    <a href="https://x.com/RaenestHQ"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/company/raenest/"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a>
+                <div class="footer-brand">
+                    <a class="footer-logo" href="https://www.raenest.com/">
+                        <img class="footer-logo-img" src="https://cdn.corenexis.com/f/ehOaKZkN.png" alt="Raenest">
+                    </a>
+                    <p class="footer-address">7460 Warren Parkway, Suite 100,<br>Frisco, TX 75034, US</p>
+ 
+                    <div class="footer-social">
+                        <a href="https://youtube.com/@raenest?si=fpQTBa5Ywj5ezgIv"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/></svg></a>
+                        <a href="https://www.instagram.com/raenestapp/"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="white" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2"/></svg></a>
+                        <a href="https://x.com/RaenestHQ"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/raenest/"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a>
+                    </div>
+                </div>
+ 
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Personal</h4>
+                        <ul>
+                            <li><a href="https://www.raenest.com/send-money">Send Money</a></li>
+                            <li><a href="https://www.raenest.com/cards">Cards</a></li>
+                            <li><a href="https://www.raenest.com/receive-money">Receive Money</a></li>
+                            <li><a href="https://www.raenest.com/global-accounts">Global Accounts</a></li>
+                            <li><a href="https://www.raenest.com/invoices">Invoices</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Business</h4>
+                        <ul>
+                            <li><a href="https://www.raenest.com/business/make-payments">Make Payments</a></li>
+                            <li><a href="https://www.raenest.com/business/cards">Cards</a></li>
+                            <li><a href="https://www.raenest.com/business/receive-payments">Receive Payments</a></li>
+                            <li><a href="https://www.raenest.com/business/global-accounts">Global Accounts</a></li>
+                            <li><a href="https://www.raenest.com/business/invoices">Invoices</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="https://www.raenest.com/about-us">Our Story</a></li>
+                            <li class="career"><a href="https://raenest.bamboohr.com/careers">Career</a><span class="hiring">We are Hiring!</span></li>
+                            <li><a href="https://www.raenest.com/womens-mentorship-program">Women's Mentorship</a></li>
+                            <li><a href="https://www.raenest.com/blog">News & Blog</a></li>
+                            <li><a href="https://www.raenest.com/india">India</a></li>
+                            <li><a href="https://www.raenest.com/philippines">Philippines</a></li>
+                            <li><a href="https://www.raenest.com/usa">United States</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="http://help.raenest.com">Customer Help</a></li>
+                            <li><a href="https://www.raenest.com/contact-us">Contact us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
  
-            <div class="footer-cols">
-                <div class="footer-col">
-                    <h4>Personal</h4>
-                    <ul>
-                        <li><a href="https://www.raenest.com/send-money">Send Money</a></li>
-                        <li><a href="https://www.raenest.com/cards">Cards</a></li>
-                        <li><a href="https://www.raenest.com/receive-money">Receive Money</a></li>
-                        <li><a href="https://www.raenest.com/global-accounts">Global Accounts</a></li>
-                        <li><a href="https://www.raenest.com/invoices">Invoices</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Business</h4>
-                    <ul>
-                        <li><a href="https://www.raenest.com/business/make-payments">Make Payments</a></li>
-                        <li><a href="https://www.raenest.com/business/cards">Cards</a></li>
-                        <li><a href="https://www.raenest.com/business/receive-payments">Receive Payments</a></li>
-                        <li><a href="https://www.raenest.com/business/global-accounts">Global Accounts</a></li>
-                        <li><a href="https://www.raenest.com/business/invoices">Invoices</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="https://www.raenest.com/about-us">Our Story</a></li>
-                        <li class="career"><a href="https://raenest.bamboohr.com/careers">Career</a><span class="hiring">We are Hiring!</span></li>
-                        <li><a href="https://www.raenest.com/womens-mentorship-program">Women's Mentorship</a></li>
-                        <li><a href="https://www.raenest.com/blog">News & Blog</a></li>
-                        <li><a href="https://www.raenest.com/india">India</a></li>
-                        <li><a href="https://www.raenest.com/philippines">Philippines</a></li>
-                        <li><a href="https://www.raenest.com/usa">United States</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="http://help.raenest.com">Customer Help</a></li>
-                        <li><a href="https://www.raenest.com/contact-us">Contact us</a></li>
-                    </ul>
+            <div class="footer-bar">
+                <p>© Copyright 2026. All Right Reserved</p>
+                <div class="footer-bar-links">
+                    <a href="https://www.raenest.com/terms-of-service">Terms & Conditions</a>
+                    <a href="https://www.raenest.com/privacy-policy">Privacy Policy</a>
                 </div>
             </div>
-        </div>
  
-        <!-- copyright line -->
-        <div class="footer-bar">
-            <p>© Copyright 2026. All Right Reserved</p>
-            <div class="footer-bar-links">
-                <a href="https://www.raenest.com/terms-of-service">Terms & Conditions</a>
-                <a href="https://www.raenest.com/privacy-policy">Privacy Policy</a>
+            <div class="footer-legal">
+                <p>Raenest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by banking partners. Card services are provided by Raenest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</p>
+                <p>The Raenest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Raenest provides the platform interface through which users can access and manage the card. The card itself is a separate product from the broader Raenest platform. Services such as global accounts, stablecoins, currency conversion, money transfers, and investments are independent offerings available within the Raenest platform.</p>
+                <p>Raelic LLC is registered in the United States as a Money Services Business and maintains NMLS ID 2746973</p>
+                <p>Raenest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection Corporation. Raenest does not recommend any specific securities or investment strategies. Investing involves risk investments may lose value, including the loss of principal. Past performance does not guarantee future results. Investors should consider their investment objectives and risks carefully before investing. U.S. stock investments are held with Alpaca Securities LLC, a U.S.-licensed broker-dealer regulated by the SEC and FINRA. Your assets are custodied under strict regulatory and security standards, and you retain full visibility into your holdings and performance at all times. Investment feature is offered in partnership with City Investment Capital Limited, a firm licensed by the Securities and Exchange Commission of Nigeria.</p>
+                <p>Raenest Inc. Canada is registered with FINTRAC as a Money Services Business (Registration No. 1443707-1). Registered Office: 212 King Street West, 6th Floor, Toronto, ON M5H 1K5.</p>
+                <p>Raenest Inc. is licensed by the Central Bank of Nigeria as an International Money Transfer Operator. Banking services in the UK are provided by Clear Junction Ltd, authorised and regulated by the Financial Conduct Authority (FCA) as an Electronic Money Institution. U.S. securities brokerage services are provided by Alpaca Securities LLC (“Alpaca Securities”), a member of FINRA and SIPC, and a wholly-owned subsidiary of AlpacaDB, Inc.</p>
             </div>
-        </div>
  
-        <!-- legal small print -->
-        <div class="footer-legal">
-            <p>Raenest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by banking partners. Card services are provided by Raenest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</p>
-            <p>The Raenest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Raenest provides the platform interface through which users can access and manage the card. The card itself is a separate product from the broader Raenest platform. Services such as global accounts, stablecoins, currency conversion, money transfers, and investments are independent offerings available within the Raenest platform.</p>
-            <p>Raelic LLC is registered in the United States as a Money Services Business and maintains NMLS ID 2746973</p>
-            <p>Raenest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection Corporation. Raenest does not recommend any specific securities or investment strategies. Investing involves risk investments may lose value, including the loss of principal. Past performance does not guarantee future results. Investors should consider their investment objectives and risks carefully before investing. U.S. stock investments are held with Alpaca Securities LLC, a U.S.-licensed broker-dealer regulated by the SEC and FINRA. Your assets are custodied under strict regulatory and security standards, and you retain full visibility into your holdings and performance at all times. Investment feature is offered in partnership with City Investment Capital Limited, a firm licensed by the Securities and Exchange Commission of Nigeria.</p>
-            <p>Raenest Inc. Canada is registered with FINTRAC as a Money Services Business (Registration No. 1443707-1). Registered Office: 212 King Street West, 6th Floor, Toronto, ON M5H 1K5.</p>
-            <p>Raenest Inc. is licensed by the Central Bank of Nigeria as an International Money Transfer Operator. Banking services in the UK are provided by Clear Junction Ltd, authorised and regulated by the Financial Conduct Authority (FCA) as an Electronic Money Institution. U.S. securities brokerage services are provided by Alpaca Securities LLC (“Alpaca Securities”), a member of FINRA and SIPC, and a wholly-owned subsidiary of AlpacaDB, Inc.</p>
         </div>
+    </footer>
  
-    </div>
-</footer>
 </main>
-
-
-
+ 
 </body>
 </html>

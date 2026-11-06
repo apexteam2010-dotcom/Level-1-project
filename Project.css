@@ -1,90 +1,81 @@
+
 * {
     box-sizing: border-box;
 }
-
+ 
 body {
     margin: 0;
-    /* removes the default white edge */
     font-family: "DM Sans", Arial, sans-serif;
     color: #0b0a14;
-    /* near-black text */
     background: white;
-    
-    /* For the responsiveness */
     overflow-x: clip;
 }
-
-/* links: no underline, and they take the colour of the text around them */
+ 
 a {
     color: inherit;
     text-decoration: none;
 }
-
-/* lists: no bullet points and no default spacing */
+ 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
-
-/* =====================================================
-   NAVBAR
-   ===================================================== */
-
-/* the white bar at the top. z-index keeps the dropdowns above the hero */
+ 
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+.menu-button {
+    display: none;
+}
+ 
+ 
+/* NAVBAR */
+ 
 .site-header {
     position: relative;
     z-index: 50;
     background: white;
 }
-
-/* flex = put the children (logo, switch, links, buttons) in one row
-   align-items: center = line them up in the middle of the bar */
+ 
 .navbar {
     display: flex;
     align-items: center;
     height: 6.406vw;
     padding: 0 4.531vw;
-    /* space on the left and right edges */
 }
-
-/* ----- Logo ----- */
+ 
 .brand {
     display: flex;
     align-items: center;
     gap: 3px;
-    /* space between the icon and the word */
     flex-shrink: 0;
-    /* do not squeeze the logo when space is tight */
 }
-
+ 
 .brand-icon {
     display: block;
     height: 1.562vw;
     flex-shrink: 0;
 }
-
+ 
 .brand-text {
     font-size: 2.396vw;
     font-weight: 700;
     letter-spacing: -0.065em;
-    /* pulls the letters closer together */
     line-height: 1;
 }
-
-/* ----- Personal / Business switch ----- */
-/* the light grey pill */
+ 
 .switch {
     display: flex;
     margin-left: 3.854vw;
-    /* gap between the logo and the pill */
     padding: 6px;
     background: #f6f6f8;
     border-radius: 999px;
-    /* a huge radius = fully rounded ends */
 }
-
+ 
 .switch-link {
     display: flex;
     align-items: center;
@@ -95,65 +86,46 @@ ul {
     font-weight: 600;
     letter-spacing: -0.02em;
 }
-
-/* the selected tab (Personal) is black with white text */
+ 
 .switch-link.active {
     background: #0b0a14;
     color: white;
 }
-
-/* ----- Products / Earn / News & Blog ----- */
+ 
 .nav-links {
     display: flex;
     gap: 5.521vw;
-    /* space between the three links */
     margin-left: 4.896vw;
-    /* space after the Personal/Business pill */
 }
-
+ 
 .nav-link {
     display: block;
     padding: 10px 0;
-    /* extra space above and below, so hovering is easier */
     font-size: 1.016vw;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
-
-
-/* =====================================================
-   DROPDOWNS (Products, Earn and English)
-   They are normal lists that are hidden. When you hover over
-   the link, the list is shown. No JavaScript needed.
-   ===================================================== */
-
-/* position: relative lets the dropdown be placed
-   exactly under its own link */
+ 
+ 
+/* DROPDOWNS (Products, Earn and English) */
+ 
 .has-dropdown {
     position: relative;
 }
-
-/* the white card. display: none = hidden until hovered */
+ 
 .dropdown {
     display: none;
     position: absolute;
-    /* floats over the page instead of pushing things down */
     top: calc(100% + 19px);
-    /* 100% = just under the link, then a little more */
     left: -11.615vw;
-    /* negative = starts to the left of the link */
     width: 27.448vw;
     padding: 1.302vw 1.302vw 2.552vw;
-    /* top, left and right, bottom */
     background: white;
     border: 1px solid #e8e6f4;
     border-radius: 28px;
     box-shadow: 0 20px 50px rgba(30, 20, 90, 0.12);
-    /* soft shadow under the card */
 }
-
-/* an invisible strip that fills the small gap between the link and the card.
-   Without it, the menu would close while your mouse is crossing the gap */
+ 
 .dropdown::before {
     content: "";
     position: absolute;
@@ -162,13 +134,11 @@ ul {
     right: 0;
     height: 20px;
 }
-
-/* when the mouse is over the link or the card, show the card */
+ 
 .has-dropdown:hover .dropdown {
     display: block;
 }
-
-/* one row inside the dropdown (icon on the left, text on the right) */
+ 
 .drop-item {
     display: flex;
     align-items: center;
@@ -176,18 +146,15 @@ ul {
     padding: 0.599vw 0.625vw;
     border-radius: 16px;
 }
-
-/* the row turns light grey when you hover on it */
+ 
 .drop-item:hover {
     background: #f4f4f7;
 }
-
-/* and the small purple square behind the icon disappears */
+ 
 .drop-item:hover .drop-icon {
     background: transparent;
 }
-
-/* the small square behind each icon */
+ 
 .drop-icon {
     display: flex;
     align-items: center;
@@ -198,8 +165,7 @@ ul {
     background: #f5f4ff;
     border-radius: 12px;
 }
-
-/* the line icons (send, card, bank...) are drawn with a purple outline */
+ 
 .icon {
     width: 1.25vw;
     height: 1.25vw;
@@ -209,8 +175,7 @@ ul {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-/* the green circle with "up" for Upwork */
+ 
 .upwork-dot {
     display: flex;
     align-items: center;
@@ -218,95 +183,81 @@ ul {
     width: 1.25vw;
     height: 1.25vw;
     border-radius: 50%;
-    /* 50% = a perfect circle */
     background: #14a800;
     color: white;
     font-size: 0.573vw;
     font-weight: 700;
 }
-
-/* the small green diamond for Stablecoins */
+ 
 .gem {
     width: 12px;
     height: 12px;
     fill: #2fbf8f;
 }
-
-/* the title and the grey description sit on top of each other */
+ 
 .drop-text {
     display: flex;
     flex-direction: column;
 }
-
+ 
 .drop-title,
 .drop-desc {
     font-size: 0.99vw;
     line-height: 1.615vw;
     letter-spacing: -0.025em;
 }
-
+ 
 .drop-desc {
     color: #6f6f7c;
-    /* grey */
 }
-
-/* the thin line at the bottom of the card */
+ 
 .drop-divider {
     height: 1px;
     margin-top: 0.573vw;
     background: #dedbf0;
 }
-
-/* ----- English dropdown ----- */
-/* it uses the same .dropdown rules above, then changes a few things */
+ 
 .dropdown-lang {
     top: calc(100% + 24px);
     left: -1.562vw;
     width: 17.188vw;
     padding: 0.833vw 1.562vw 1.51vw;
     background: #dddddd;
-    /* grey card */
     border: none;
     border-radius: 10px;
     box-shadow: none;
 }
-
+ 
 .dropdown-lang::before {
     top: -24px;
     height: 24px;
 }
-
+ 
 .lang-item {
     display: block;
     font-size: 1.094vw;
     line-height: 1.875vw;
     letter-spacing: -0.01em;
     white-space: nowrap;
-    /* never break a language name into two lines */
 }
-
-/* the language you are on right now is bold */
+ 
 .lang-item.current {
     font-weight: 700;
 }
-
-
-/* =====================================================
-   RIGHT SIDE OF THE NAVBAR (language, Login, Create an account)
-   ===================================================== */
-
-/* margin-left: auto pushes this whole group to the far right */
+ 
+ 
+/* RIGHT SIDE OF THE NAVBAR (language, Login, Create an account) */
+ 
 .actions {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
-
+ 
 .lang-wrap {
     margin-right: 3.75vw;
-    /* space between English and Login */
 }
-
+ 
 .language {
     display: flex;
     align-items: center;
@@ -315,18 +266,17 @@ ul {
     font-size: 1.146vw;
     letter-spacing: -0.01em;
 }
-
+ 
 .flag {
     width: 1.667vw;
     height: 1.146vw;
 }
-
+ 
 .chevron {
     width: 0.938vw;
     height: 0.938vw;
 }
-
-/* both buttons share these rules */
+ 
 .btn {
     display: flex;
     align-items: center;
@@ -338,45 +288,27 @@ ul {
     letter-spacing: -0.02em;
     white-space: nowrap;
 }
-
-/* Login: white button with a purple outline */
+ 
 .btn-outline {
     margin-right: 0.781vw;
     color: #4f40d8;
     border: 1px solid #4f40d8;
 }
-
-/* Create an account: solid purple */
+ 
 .btn-solid {
     color: white;
     background: #4f40d8;
     border: 1px solid #4f40d8;
 }
-
+ 
 .btn-solid:hover {
     background: #4233c0;
-    /* a bit darker on hover */
     border-color: #4233c0;
 }
-
-/* on small screens the navbar items drop to a second line instead of
-   running off the page. (A proper phone menu can come later.) */
-@media (max-width: 1439.98px) {
-    .navbar {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 20px 4.531vw;
-    }
-}
-
-
-/* =====================================================
-   HERO (the big purple section)
-   ===================================================== */
-
-/* position: relative lets the photo be placed inside it.
-   overflow: hidden cuts off anything that sticks out (like the photo) */
+ 
+ 
+/* HERO */
+ 
 .hero {
     position: relative;
     height: 65vw;
@@ -384,18 +316,13 @@ ul {
     background: #5240d9;
     color: white;
 }
-
-/* the left side: flags, headline, paragraph, buttons.
-   z-index: 2 keeps the text above the photo */
+ 
 .hero-content {
     position: relative;
     z-index: 2;
     padding: 6.51vw 0 0 3.906vw;
-    /* top and left space */
 }
-
-/* ----- Flags that scroll across ----- */
-/* a window that only shows part of the moving strip */
+ 
 .flag-marquee {
     position: relative;
     width: 49.219vw;
@@ -403,9 +330,7 @@ ul {
     margin-left: 0.521vw;
     overflow: hidden;
 }
-
-/* purple fade on the left and right ends, so flags appear and
-   disappear softly. ::before = left end, ::after = right end */
+ 
 .flag-marquee::before,
 .flag-marquee::after {
     content: "";
@@ -415,66 +340,58 @@ ul {
     width: 12%;
     z-index: 1;
 }
-
+ 
 .flag-marquee::before {
     left: 0;
     background: linear-gradient(to right, #5240d9, transparent);
 }
-
+ 
 .flag-marquee::after {
     right: 0;
     background: linear-gradient(to left, #5240d9, transparent);
 }
-
-/* the moving strip holds two copies of the flags side by side.
-   It slides left by half its width (= one copy) again and again,
-   so it looks like it never ends */
+ 
 .flag-track {
     display: flex;
     width: max-content;
     animation: scroll-flags 40s linear infinite;
 }
-
+ 
 .flag-track img {
     display: block;
     height: 3.021vw;
 }
-
+ 
 @keyframes scroll-flags {
     to {
         transform: translateX(-50%);
     }
 }
-
-/* ----- Headline and paragraph ----- */
+ 
 .hero-title {
     width: 52.083vw;
-    /* this width makes the headline break into 2 lines */
     margin: 2.552vw 0 0;
     font-size: 6.667vw;
     font-weight: 300;
-    /* thin letters */
     line-height: 1.27;
     letter-spacing: -0.018em;
 }
-
+ 
 .hero-text {
     max-width: 24.479vw;
-    /* keeps the paragraph narrow so it wraps */
     margin: 1.042vw 0 0;
     font-size: 1.25vw;
     line-height: 1.46;
     letter-spacing: -0.05em;
 }
-
-/* ----- The two hero buttons ----- */
+ 
 .hero-actions {
     display: flex;
     align-items: center;
     gap: 0.938vw;
     margin-top: 4.062vw;
 }
-
+ 
 .hero-btn {
     display: flex;
     align-items: center;
@@ -485,51 +402,44 @@ ul {
     letter-spacing: -0.03em;
     white-space: nowrap;
 }
-
-/* white button with purple text */
+ 
 .hero-btn-primary {
     font-weight: 600;
     color: #4f40d8;
     background: white;
 }
-
-/* see-through light purple button */
+ 
 .hero-btn-store {
     gap: 0.729vw;
     font-weight: 500;
     color: #0b0a14;
     background: rgba(255, 255, 255, 0.64);
-    /* white at 64% = see-through */
     border: 1px solid rgba(255, 255, 255, 0.7);
 }
-
-/* the Apple icon, a thin line, and the Play icon */
+ 
 .store-icons {
     display: flex;
     align-items: center;
     gap: 0.521vw;
 }
-
+ 
 .store-icon {
     width: 1.25vw;
     height: 1.25vw;
     fill: rgba(255, 255, 255, 0.85);
 }
-
+ 
 .store-divider {
     width: 1px;
     height: 1.25vw;
     background: rgba(255, 255, 255, 0.85);
 }
-
-/* position: relative lets the QR card be placed right under the button */
+ 
 .download {
     position: relative;
     flex-shrink: 0;
 }
-
-/* the QR card: invisible by default.
-   The long delay (2s) in this "hidden" state is what makes it wait 2 seconds before it fades away */
+ 
 .qr-card {
     position: absolute;
     top: calc(100% + 0.573vw);
@@ -545,14 +455,13 @@ ul {
     visibility: hidden;
     transition: opacity 0.3s ease 2s, visibility 0s linear 2.56s;
 }
-
-/* when the mouse is over the button or over the card itself, show it straight away */
+ 
 .download:hover .qr-card {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.25s ease, visibility 0s;
 }
-
+ 
 .qr-title {
     margin: 0;
     font-size: 1.042vw;
@@ -560,17 +469,14 @@ ul {
     font-weight: 600;
     letter-spacing: -0.02em;
 }
-
+ 
 .qr-img {
     display: block;
     width: 10.26vw;
     height: auto;
     margin: 1.354vw auto 0;
 }
-
-/* -- Images on the right -- */
-/* position: absolute = placed using top / right / left numbers.
-   The negative "right" lets the photo go past the edge of the screen */
+ 
 .hero-photo {
     position: absolute;
     z-index: 1;
@@ -579,45 +485,34 @@ ul {
     width: 80vw;
     height: 145vh;
 }
-
-/* the "Recent transactions" card.
-   z-index: 3 puts it above the photo */
+ 
 .hero-ui {
     position: absolute;
     z-index: 3;
     top: 43.125vw;
     left: 43.281vw;
     width: 21vw;
+    border-radius: 1.5vw;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
-
-.hero-ui {
-    border-radius: 1.5vw;                   /* clips the blur to the card's rounded corners */
-    backdrop-filter: blur(12px);            /* blurs whatever is behind the card */
-    -webkit-backdrop-filter: blur(12px);    /* the same, for Safari */
-}
-
-.mother-section {
-    height: 65rem;
-}
-
+ 
+ 
+/* INVESTORS */
+ 
 .investors {
     padding: 3.802vw 7.135vw 0;
-    /* space above, and on the left and right */
 }
-
-/* small capital-letter sentence in the middle */
+ 
 .investors-title {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    /* turns the text into CAPITAL LETTERS */
     font-size: 0.875vw;
     line-height: 1.25vw;
     letter-spacing: -0.02em;
 }
-
-/* the logos sit in one row.
-   space-between = equal space between them, first one at the left edge, last one at the right edge */
+ 
 .investors-logos {
     display: flex;
     justify-content: space-between;
@@ -625,47 +520,41 @@ ul {
     height: 2.083vw;
     margin-top: 2.552vw;
 }
-
-/* each logo gets its own width (height follows automatically) */
+ 
 .logo-qed {
     width: 3.906vw;
 }
-
+ 
 .logo-google {
     width: 6.562vw;
 }
-
+ 
 .logo-vp {
     width: 7.188vw;
 }
-
+ 
 .logo-techstars {
     width: 10vw;
 }
-
+ 
 .logo-seedstars {
     width: 7.5vw;
 }
-
+ 
 .logo-norrsken {
     width: 3.802vw;
 }
-
-
-/* =====================================================
-   REVIEWS ("Over 1,000,000 people love us")
-   ===================================================== */
-
+ 
+ 
+/* REVIEWS */
+ 
 .reviews {
     padding: 15.208vw 0 6.25vw;
-    /* big space above (after the logos) and below */
 }
-
+ 
 .reviews-title {
     width: 36.458vw;
-    /* this width makes the title break into 2 lines */
     margin: 0 auto;
-    /* auto left and right = centred */
     text-align: center;
     font-size: 3.350vw;
     font-weight: 700;
@@ -673,7 +562,7 @@ ul {
     letter-spacing: -0.05em;
     color: #1f1c19;
 }
-
+ 
 .reviews-sub {
     margin: 1.458vw 0 0;
     text-align: center;
@@ -682,9 +571,7 @@ ul {
     letter-spacing: -0.04em;
     color: #1f1c19;
 }
-
-/* the cards sit in a grid: 3 columns and 2 rows.
-   The video card is told to take both rows, so it is tall. */
+ 
 .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -693,18 +580,16 @@ ul {
     width: 80.938vw;
     margin: 3.906vw auto 0;
 }
-
-/* one text review card */
+ 
 .review-card {
     display: flex;
     flex-direction: column;
     padding: 1.458vw 1.302vw 3.073vw;
-    /* top, left and right, bottom */
     background: #f8f8f8;
     border-radius: 34px;
     color: #1f1c19;
 }
-
+ 
 .review-title {
     margin: 0;
     font-size: 1.094vw;
@@ -712,38 +597,35 @@ ul {
     line-height: 1.562vw;
     letter-spacing: -0.04em;
 }
-
+ 
 .review-text {
     margin: 0.729vw 0 0;
     font-size: 0.938vw;
     line-height: 1.63vw;
     letter-spacing: -0.045em;
 }
-
-/* name + flag picture. margin-top: auto pushes it to the bottom of the card */
+ 
 .review-author {
     display: flex;
     align-items: center;
     gap: 0.625vw;
     margin-top: auto;
 }
-
+ 
 .review-author img {
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 50%;
 }
-
+ 
 .review-author span {
     font-size: 1.042vw;
     font-weight: 600;
     letter-spacing: -0.03em;
 }
-
-/* the video card in the middle */
+ 
 .review-video {
     grid-row: span 2;
-    /* take up both rows */
     display: flex;
     flex-direction: column;
     padding: 1.25vw 1.25vw 1.198vw;
@@ -751,20 +633,16 @@ ul {
     border-radius: 34px;
     color: #1f1c19;
 }
-
-/* the box that holds the video */
+ 
 .video-box {
     position: relative;
     flex: 1;
-    /* fills all the space above the name */
     margin-bottom: 1.25vw;
-    background: black;
-    /* shows around the video if its shape does not fill the box */
+    background: #3a2f26;
     border-radius: 20px;
     overflow: hidden;
-    /* keeps the rounded corners on the video */
 }
-
+ 
 .video-poster {
     display: block;
     position: absolute;
@@ -773,14 +651,14 @@ ul {
     width: 100%;
     height: 100%;
 }
-
+ 
 .video-poster img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+ 
 .play-button {
     display: block;
     position: absolute;
@@ -792,7 +670,7 @@ ul {
     border-radius: 50%;
     background: rgba(210, 210, 210, 0.7);
 }
-
+ 
 .play-button::after {
     content: "";
     position: absolute;
@@ -803,7 +681,7 @@ ul {
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
 }
-
+ 
 .video-popup {
     display: none;
     position: fixed;
@@ -816,18 +694,18 @@ ul {
     justify-content: center;
     background: rgba(8, 6, 21, 0.85);
 }
-
+ 
 .video-popup:target {
     display: flex;
 }
-
+ 
 .video-popup iframe {
     width: 62.5vw;
     height: 35.156vw;
     border: none;
     border-radius: 14px;
 }
-
+ 
 .video-close {
     position: absolute;
     top: 2vw;
@@ -836,27 +714,14 @@ ul {
     line-height: 1;
     color: white;
 }
-
-/* the video fills the whole box */
-.video-box {
-    position: relative;
-    flex: 1;
-    margin-bottom: 1.25vw;
-    background: #3a2f26;                    /* dark brown, so the button still shows if the photo is missing */
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-/* dark pill with the stars: "4.6 Apple store, Play store" */
+ 
 .store-rating {
     display: flex;
     align-items: center;
     gap: 0.677vw;
     width: max-content;
-    /* only as wide as its content */
     height: 3.125vw;
     margin: 1.927vw auto 0;
-    /* auto left and right = centred */
     padding: 0 1.875vw 0 1.354vw;
     background: #26231f;
     border-radius: 16px;
@@ -865,30 +730,23 @@ ul {
     letter-spacing: -0.03em;
     color: #a9a6a0;
 }
-
+ 
 .store-rating img {
     height: 1.302vw;
 }
-
-/* =====================================================
-   STACKED CARDS (Receive money, Global accounts, Cards, Send money, Earn)
-   Each card is "sticky": while you scroll, it stays stuck to the top of
-   the screen, and the next card slides up over it. No JavaScript needed.
-   ===================================================== */
  
-/* position: sticky + top: 0 = "stick to the top of the screen once you reach it".
-   Cards later in the HTML are drawn on top of the earlier ones */
+ 
+/* STACKED CARDS (Receive money, Global accounts, Cards, Send money, Earn) */
+ 
 .slide {
     position: sticky;
     top: 0;
     height: 45.573vw;
-    overflow: hidden;                       /* hides any part of the picture that sticks out */
+    overflow: hidden;
     background: #1b1511;
     color: white;
 }
  
-/* the big background picture. object-fit: cover = fill the whole card
-   without stretching the picture (extra parts get cropped) */
 .slide-bg {
     position: absolute;
     top: 0;
@@ -898,7 +756,6 @@ ul {
     object-fit: cover;
 }
  
-/* the small title at the top left of every card */
 .slide-label {
     position: absolute;
     top: 7.708vw;
@@ -909,14 +766,12 @@ ul {
     letter-spacing: -0.05em;
 }
  
-/* the see-through "glass" picture (notification, account details...) */
 .slide-ui {
     position: absolute;
-    z-index: 3;                             /* above the text */
+    z-index: 3;
     height: auto;
 }
  
-/* title + paragraph + "Learn more" */
 .slide-text {
     position: absolute;
     z-index: 2;
@@ -928,7 +783,7 @@ ul {
     line-height: 3.125vw;
     font-weight: 600;
     letter-spacing: -0.05em;
-    white-space: nowrap;                    /* keep the title on one line */
+    white-space: nowrap;
 }
  
 .slide-para {
@@ -949,45 +804,40 @@ ul {
     letter-spacing: -0.03em;
 }
  
-/* the round lime arrow */
 .slide-link svg {
     width: 1.146vw;
     height: 1.146vw;
 }
  
-/* ----- where things sit on each card (left / top / width, measured from the screenshots) ----- */
+.slide-receive .slide-ui   { left: 13.021vw; top: 23.958vw; width: 27.24vw; }
+.slide-receive .slide-text { left: 52.708vw; top: 24.427vw; width: 30.208vw; }
  
-.slide-receive .slide-ui   { left: 13.021vw;  top: 23.958vw;  width: 27.24vw; }
-.slide-receive .slide-text { left: 52.708vw; top: 24.427vw;  width: 30.208vw; }
- 
-.slide-global .slide-ui    { left: 63.073vw; top: 14.583vw;  width: 18.021vw; }
+.slide-global .slide-ui    { left: 63.073vw; top: 14.583vw; width: 18.021vw; }
 .slide-global .slide-text  { left: 19.01vw;  top: 16.51vw;  width: 30.729vw; }
  
-.slide-cards .slide-ui     { left: 26.667vw;  top: 13.75vw;  width: 27.24vw; }
-.slide-cards .slide-text   { left: 4.531vw;   top: 22.76vw;  width: 31.25vw; }
+.slide-cards .slide-ui     { left: 26.667vw; top: 13.75vw;  width: 27.24vw; }
+.slide-cards .slide-text   { left: 4.531vw;  top: 22.76vw;  width: 31.25vw; }
  
-.slide-send .slide-ui      { left: 17.604vw;  top: 22.76vw;  width: 27.188vw; }
-.slide-send .slide-text    { left: 58.698vw; top: 26.198vw;  width: 30.208vw; }
+.slide-send .slide-ui      { left: 17.604vw; top: 22.76vw;  width: 27.188vw; }
+.slide-send .slide-text    { left: 58.698vw; top: 26.198vw; width: 30.208vw; }
  
-.slide-earn .slide-text    { left: 58.021vw; top: 27.344vw;  width: 23.438vw; }
-
-/* RAENEST FOR EVERYONE (tabs + cards that slide)
-   The tabs are hidden radio buttons with labels on top.
-   When you click a label, its radio becomes ":checked" */
+.slide-earn .slide-text    { left: 58.021vw; top: 27.344vw; width: 23.438vw; }
+ 
+ 
+/* RAENEST FOR EVERYONE (tabs + sliding cards) */
  
 .everyone {
     position: relative;
     overflow: hidden;
-    padding: 6.406vw 0 8.49vw 8.385vw;  
+    padding: 6.406vw 0 8.49vw 8.385vw;
 }
-
+ 
 .everyone input {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
-
-
+ 
 .everyone-top {
     display: flex;
     justify-content: space-between;
@@ -1004,7 +854,6 @@ ul {
     color: #1f1c19;
 }
  
-
 .tabs {
     display: flex;
     gap: 0.677vw;
@@ -1030,8 +879,6 @@ ul {
     cursor: pointer;
 }
  
-/* the chosen tab is black with white text */
-
 #who1:checked ~ .everyone-top label[for="who1"],
 #who2:checked ~ .everyone-top label[for="who2"],
 #who3:checked ~ .everyone-top label[for="who3"],
@@ -1042,7 +889,6 @@ ul {
     color: white;
 }
  
-/* ----- the sliding cards ----- */
 .who-view {
     margin-top: 3.594vw;
 }
@@ -1072,8 +918,6 @@ ul {
     object-fit: cover;
 }
  
-/* dark fade at the bottom so the white text is easy to read.
-   ::after = an extra invisible layer drawn on top of the picture */
 .who-card::after {
     content: "";
     position: absolute;
@@ -1125,23 +969,17 @@ ul {
 }
  
  
-/* =====================================================
-   RAENEST FOR BUSINESS (dark purple card)
-   ===================================================== */
+/* RAENEST FOR BUSINESS */
  
 .business {
-    padding: 2.5vw 3.906vw 6.25vw;
-}
-
-.business {
-    padding: 2.5vw 8.385vw 4.948vw;      /* top, left and right, bottom: the card is narrower and the gap below is smaller */
+    padding: 2.5vw 8.385vw 4.948vw;
 }
  
 .business-card {
     position: relative;
     display: flex;
-    align-items: center; /* centres the content up and down */                    
-    justify-content: center; /* centres the content left and right */
+    align-items: center;
+    justify-content: center;
     height: 30vw;
     overflow: hidden;
     background: #28206d;
@@ -1150,7 +988,6 @@ ul {
     text-align: center;
 }
  
-/* the swirly purple picture behind the text */
 .business-bg {
     position: absolute;
     top: 0;
@@ -1161,7 +998,7 @@ ul {
 }
  
 .business-content {
-    position: relative;     /* so it sits above the picture */
+    position: relative;
 }
  
 .business-title {
@@ -1193,12 +1030,15 @@ ul {
     letter-spacing: -0.03em;
     color: #0b0a14;
 }
-
+ 
+ 
+/* YOUR MONEY, WHEREVER YOU NEED IT */
+ 
 .everywhere {
     position: relative;
     height: 70.052vw;
     background: #f7f7ff;
-    overflow: hidden; 
+    overflow: hidden;
 }
  
 .everywhere-title {
@@ -1232,13 +1072,12 @@ ul {
     width: 65.1vw;
 }
  
-/* the two small cards floating over the phone picture */
 .float-card {
     position: absolute;
     width: 13.281vw;
-    border-radius: 1.04vw;             
-    backdrop-filter: blur(14px);          
-    -webkit-backdrop-filter: blur(14px);   
+    border-radius: 1.04vw;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
  
 .float-balance {
@@ -1246,22 +1085,22 @@ ul {
     left: 74.7vw;
     width: 11.12vw;
 }
-
+ 
 .float-send {
     top: 33.2vw;
     left: 51.78vw;
     width: 12.5vw;
 }
  
-/*LOGOS + THREE PHOTO CARDS */
+ 
+/* LOGOS + THREE PHOTO CARDS */
  
 .creators {
     position: relative;
-    height: 28.125vw;     
+    height: 28.125vw;
     background: #f7f7ff;
 }
  
-/* each side is a small grid: 2 columns and 3 rows, every logo centred in its box */
 .logos {
     position: absolute;
     top: 5vw;
@@ -1279,14 +1118,9 @@ ul {
     width: 10.885vw;
 }
  
-/* ----- the three photo cards ----- */
- 
-/* .fan is just an invisible point in the middle of the section.
-   The cards are placed around that point. pointer-events: none means the
-   empty space around the cards does not count, only the cards themselves do */
 .fan {
     position: absolute;
-    top: 12.14vw;       /* was 18.854vw: moves the three photo cards up, level with the middle row of logos */
+    top: 12.14vw;
     left: 50%;
     width: 0;
     height: 0;
@@ -1296,47 +1130,38 @@ ul {
 .fan-card {
     position: absolute;
     width: 12.5vw;
-    margin: -7.344vw 0 0 -6.25vw;           /* pulls each card back by half its size, so the point is its centre */
+    margin: -7.344vw 0 0 -6.25vw;
     pointer-events: auto;
-    transition: transform 0.5s ease;   
+    transition: transform 0.5s ease;
 }
-
-   /* translate = move sideways / up-down, rotate = tilt  */
-
-
-.fan-back   { transform: translate(-2.813vw, 0.156vw) rotate(-24deg); }
-.fan-middle { transform: translate(0.677vw,  0vw)     rotate(-6deg); }
-.fan-front  { transform: translate(4.167vw,  1.875vw) rotate(9deg); }
  
-/* hover effect */
-
+.fan-back   { transform: translate(-2.813vw, 0.156vw) rotate(-24deg); }
+.fan-middle { transform: translate(0.677vw, 0vw) rotate(-6deg); }
+.fan-front  { transform: translate(4.167vw, 1.875vw) rotate(9deg); }
+ 
 .fan:hover .fan-back   { transform: translate(-7.083vw, 0.156vw) rotate(-24deg); }
-.fan:hover .fan-middle { transform: translate(0.104vw,  0vw)     rotate(-6deg); }
-.fan:hover .fan-front  { transform: translate(9.115vw,  1.875vw) rotate(9deg); }
-
-
-/* =====================================================
-   ROTATING WORDS (Designers, Marketers...)
-   ===================================================== */
-
+.fan:hover .fan-middle { transform: translate(0.104vw, 0vw) rotate(-6deg); }
+.fan:hover .fan-front  { transform: translate(9.115vw, 1.875vw) rotate(9deg); }
+ 
+ 
+/* ROTATING WORDS (Designers, Marketers...) */
+ 
 .roles {
-    padding-bottom: 6.25vw;
+    padding-bottom: 8.333vw;
     background: #f7f7ff;
     text-align: center;
 }
-
-/* the window: exactly one word tall, anything outside it is hidden */
+ 
 .role-window {
     height: 4.583vw;
     overflow: hidden;
 }
-
-/* the list of words. The animation moves it up, one word at a time */
+ 
 .role-list {
     animation: roll 12s infinite;
     cursor: grab;
 }
-
+ 
 .role-list li {
     height: 4.583vw;
     line-height: 4.583vw;
@@ -1345,8 +1170,7 @@ ul {
     letter-spacing: -0.065em;
     color: #4f40d8;
 }
-/* the percentages are how far up the list moves (a list of 7 words: each word = 14.29%).
-   Flat parts = the word stays still, the short slides in between = the change */
+ 
 @keyframes roll {
     0%, 13%        { transform: translateY(0); }
     16.67%, 30%    { transform: translateY(-14.2857%); }
@@ -1356,18 +1180,17 @@ ul {
     83.33%, 96.67% { transform: translateY(-71.4286%); }
     100%           { transform: translateY(-85.7143%); }
 }
-
+ 
 .roles-text {
-    width: 35.9vw;                          /* narrower, so "their" drops to the second line like the reference */
-    margin: -0.417vw auto 0;                /* the small minus pulls the sentence up a little, because the word box has spare room for letters like g */
+    width: 35.9vw;
+    margin: -0.417vw auto 0;
     font-size: 2.234vw;
     line-height: 2.708vw;
     font-weight: 600;
     letter-spacing: -0.05em;
     color: #1f1c19;
 }
-
-
+ 
 .roles-sub {
     width: 31.25vw;
     margin: 0.547vw auto 0;
@@ -1376,61 +1199,64 @@ ul {
     letter-spacing: -0.03em;
     color: #1f1c19;
 }
-
-.roles {
-    padding-bottom: 8.333vw;
-    background: #f7f7ff;
-    text-align: center;
-}
-
-/* GET PAID GLOBALLY IN 3 EASY STEPS SECTION */
-
+ 
+ 
+/* GET PAID GLOBALLY IN 3 EASY STEPS */
+ 
 .steps {
     padding-bottom: 7.135vw;
     background: #f7f7ff;
 }
-
-.step-title {
-    margin: 0;
-    font-size: 1.214vw;                   
-    line-height: 1.563vw;
+ 
+.steps-title {
+    margin: 0 0 5.443vw 8.385vw;
+    font-size: 3.125vw;
+    line-height: 3.125vw;
     font-weight: 600;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.065em;
+    color: #100325;
 }
-
-/* three equal cards in a row */
+ 
 .steps-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.25vw;
     padding: 0 8.385vw;
 }
-
+ 
 .step-card {
-    overflow: hidden;                       /* keeps the rounded corners on everything inside */
+    overflow: hidden;
     border-radius: 1.458vw;
 }
-
-/* the blue top with the picture */
+ 
 .step-top {
     position: relative;
     height: 23.125vw;
-    overflow: hidden;                       /* cuts the picture where the blue part ends */
+    overflow: hidden;
     background: #4f3fd7;
 }
-
+ 
 .step-pic {
     position: absolute;
     top: 3.958vw;
     left: 0;
     width: 100%;
 }
-
-.step-pic-3 {
-    top: 5.365vw;                        
+ 
+.step-card:nth-child(1) .step-pic {
+    left: 4.01vw;
+    width: 18.49vw;
 }
-
-/* the dark tab in the top right corner */
+ 
+.step-card:nth-child(2) .step-pic {
+    left: 2.63vw;
+    width: 21.25vw;
+}
+ 
+.step-pic-3 {
+    top: -1.875vw;
+}
+ 
 .step-badge {
     position: absolute;
     top: 0;
@@ -1438,14 +1264,14 @@ ul {
     width: 4.115vw;
     height: 4.01vw;
 }
-
+ 
 .step-badge svg {
     display: block;
     width: 100%;
     height: 100%;
     fill: #462686;
 }
-
+ 
 .step-badge span {
     position: absolute;
     top: 0.781vw;
@@ -1457,53 +1283,38 @@ ul {
     font-weight: 700;
     color: white;
 }
-
-/* the dark purple bottom with the text */
+ 
 .step-bottom {
     height: 11.875vw;
     padding: 1.563vw 1.51vw 0;
     background: linear-gradient(#3820a7, #23149d);
     color: white;
 }
-
-.steps-title {
-    margin: 0 0 5.443vw 8.385vw;
-    font-size: 3.125vw;                  
-    line-height: 3.125vw;
+ 
+.step-title {
+    margin: 0;
+    font-size: 1.214vw;
+    line-height: 1.563vw;
     font-weight: 600;
-    letter-spacing: -0.065em;
-    color: #100325;
+    letter-spacing: -0.04em;
 }
-
+ 
 .step-text {
-    width: 23.958vw;       
+    width: 23.958vw;
     margin: 0.521vw 0 0;
-    font-size: 1.172vw;                   
+    font-size: 1.172vw;
     line-height: 1.745vw;
     letter-spacing: -0.045em;
 }
-
-.step-card:nth-child(1) .step-pic {
-    left: 4.01vw;
-    width: 18.49vw;
-}
-
-.step-card:nth-child(2) .step-pic {
-    left: 2.63vw;
-    width: 21.25vw;
-}
-
-.step-pic-3 {
-    top: -1.875vw;                   
-}
-
-/*THE LATEST FROM RAENEST (blog cards, newsletter, press logos) */
-
+ 
+ 
+/* THE LATEST FROM RAENEST (blog cards, newsletter, press logos) */
+ 
 .blog {
     padding: 6.51vw 0 5.208vw;
     background: white;
 }
-
+ 
 .blog-heading {
     margin: 0 0 1.562vw;
     text-align: center;
@@ -1513,16 +1324,14 @@ ul {
     letter-spacing: -0.05em;
     color: #24201e;
 }
-
-/* three equal cards in a row */
+ 
 .blog-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.25vw;
     padding: 0 8.385vw;
 }
-
-/* position: relative lets the notch and the arrow button be placed in the card's bottom right corner */
+ 
 .blog-card {
     position: relative;
     display: block;
@@ -1532,26 +1341,24 @@ ul {
     border-radius: 1.458vw;
     color: #24201e;
 }
-
+ 
 .blog-pic {
     display: block;
     width: 100%;
     height: 16.562vw;
-    object-fit: cover;                
+    object-fit: cover;
     border-radius: 1.146vw;
 }
-
+ 
 .blog-title {
-    width: 21.094vw; 
+    width: 21.094vw;
     margin: 0.677vw 0 0;
     font-size: 0.99vw;
     line-height: 1.406vw;
     font-weight: 500;
     letter-spacing: -0.02em;
 }
-
-/* the cut-out in the card's bottom right corner: a small drawing that is
-   white inside (it covers the card's border and corner) with a thin grey curved edge */
+ 
 .blog-notch {
     position: absolute;
     right: -1px;
@@ -1560,18 +1367,11 @@ ul {
     height: 6.198vw;
     overflow: visible;
 }
-
+ 
 .notch-fill {
     fill: white;
 }
-
-.notch-line {
-    fill: none;
-    stroke: #e9e9e9;
-    stroke-width: 1;
-}
-
-/* the round purple arrow button, sitting inside the cut-out */
+ 
 .blog-arrow {
     position: absolute;
     right: 1.146vw;
@@ -1583,9 +1383,9 @@ ul {
     height: 1.927vw;
     border-radius: 50%;
     background: #4f40d8;
-    transition: transform 0.35s ease;       /* makes the slide smooth */
+    transition: transform 0.35s ease;
 }
-
+ 
 .blog-arrow svg {
     width: 1.51vw;
     height: 1.51vw;
@@ -1595,30 +1395,24 @@ ul {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-/* .blog-arrow svg:last-child {
-    transform: translateX(-2vw);
-} */
-
+ 
 .blog-card:hover .blog-arrow {
     transform: translateX(1vw);
 }
-
-/* thin grey line under the cards */
+ 
 .blog-line {
     height: 1px;
     margin: 2.552vw 8.385vw 0;
     background: #c0c0c0;
 }
-
-/* ----- newsletter row ----- */
+ 
 .newsletter {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 2.552vw 8.385vw 0;
 }
-
+ 
 .newsletter-title {
     margin: 0;
     font-size: 1.458vw;
@@ -1627,12 +1421,12 @@ ul {
     letter-spacing: -0.05em;
     color: #24201e;
 }
-
+ 
 .newsletter-form {
     display: flex;
     gap: 0.677vw;
 }
-
+ 
 .newsletter-input {
     width: 30.729vw;
     height: 2.76vw;
@@ -1643,11 +1437,11 @@ ul {
     font-size: 0.885vw;
     letter-spacing: -0.02em;
 }
-
+ 
 .newsletter-input::placeholder {
     color: #a7a6a5;
 }
-
+ 
 .newsletter-btn {
     width: 9.062vw;
     height: 2.76vw;
@@ -1661,12 +1455,11 @@ ul {
     color: white;
     cursor: pointer;
 }
-
+ 
 .newsletter-btn:hover {
     background: #4233c0;
 }
-
-/* ----- "Raenest in the News!" ----- */
+ 
 .press-heading {
     margin: 10.052vw 0 0;
     text-align: center;
@@ -1676,7 +1469,7 @@ ul {
     letter-spacing: -0.05em;
     color: #24201e;
 }
-
+ 
 .press-logos {
     display: flex;
     align-items: center;
@@ -1684,25 +1477,22 @@ ul {
     gap: 4.688vw;
     margin-top: 2.604vw;
 }
-
-/* each logo has its own width (height follows by itself) */
+ 
 .logo-techpoint  { width: 6.51vw; }
 .logo-techcabal  { width: 9.479vw; }
 .logo-techcrunch { width: 7.5vw; }
 .logo-condia     { width: 8.49vw; }
 .logo-finextra   { width: 9.583vw; }
-
-
-/* FREQUENTLY ASKED QUESTIONS
-   Each question is a <details> element. It opens and closes by itself. */
-
+ 
+ 
+/* FREQUENTLY ASKED QUESTIONS */
+ 
 .faq {
     display: flex;
-    padding: 5.365vw 8.385vw 16.25vw;   
+    padding: 5.365vw 8.385vw 16.25vw;
     background: white;
 }
-
-/* heading on the left. The right padding makes it break into 2 lines */
+ 
 .faq-title {
     flex: 0 0 34.688vw;
     margin: 1.615vw 0 0;
@@ -1713,20 +1503,19 @@ ul {
     letter-spacing: -0.05em;
     color: #24201e;
 }
-
+ 
 .faq-list {
     flex: 1;
 }
-
-/* one question. position: relative lets the round icon be placed on the right */
+ 
 .faq-item {
     position: relative;
     border-bottom: 1px solid #e9e9e9;
 }
-
+ 
 .faq-item summary {
     padding: 1.562vw 3.125vw 0.885vw 0;
-    list-style: none;                  
+    list-style: none;
     font-size: 1.094vw;
     line-height: 1.562vw;
     font-weight: 500;
@@ -1734,12 +1523,11 @@ ul {
     color: #24201e;
     cursor: pointer;
 }
-
+ 
 .faq-item summary::-webkit-details-marker {
-    display: none;                   
+    display: none;
 }
-
-/* the round purple icon with a plus, drawn with two thin lines */
+ 
 .faq-item summary::after {
     content: "";
     position: absolute;
@@ -1753,13 +1541,12 @@ ul {
         linear-gradient(white, white) center / 2px 0.469vw no-repeat,
         #4f40d8;
 }
-
-/* when the question is open, the icon turns grey and the plus turns into an x */
+ 
 .faq-item[open] summary::after {
     background-color: #d3d2d2;
     transform: rotate(45deg);
 }
-
+ 
 .faq-answer {
     width: 42.708vw;
     margin-top: 0.521vw;
@@ -1769,29 +1556,23 @@ ul {
     letter-spacing: -0.01em;
     color: #24201e;
 }
-
+ 
 .faq-answer p {
     margin: 0;
 }
-
+ 
 .faq-answer p + p {
     margin-top: 1.51vw;
 }
-
+ 
 .faq-answer a {
     text-decoration: underline;
 }
-
-   /*--- FOOTER SECTION --- */
-  
+ 
+ 
+/* FOOTER */
+ 
 .footer {
-    position: relative;
-    overflow: hidden;
-    background: #080615;
-    color: white;
-}
-
-footer.footer {
     position: relative;
     overflow: hidden;
     background: #080615;
@@ -1806,35 +1587,31 @@ footer.footer {
     height: 46.875vw;
 }
  
-
 .footer-inner {
     position: relative;
     z-index: 1;
     padding: 4.635vw 8.385vw 12.5vw;
 }
  
-
 .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-
+ 
+.footer-logo {
+    display: block;
+    height: 2.083vw;
+}
+ 
 .footer-logo-img {
     display: block;
     width: 10.417vw;
     height: 2.083vw;
-    object-fit: cover;                     
-    object-position: 50% 46%;              
+    object-fit: cover;
+    object-position: 50% 46%;
     filter: grayscale(1) contrast(30) invert(1);
     mix-blend-mode: screen;
-}
- 
-.footer-logo-text {
-    font-size: 2.76vw;
-    font-weight: 700;
-    letter-spacing: -0.065em;
-    line-height: 1;
 }
  
 .footer-address {
@@ -1944,39 +1721,28 @@ footer.footer {
 .footer-legal p:last-child {
     margin-bottom: 0;
 }
-
-.footer-logo {
-    display: block;
-    height: 2.083vw;
-}
-
-
-/* Responsiveness control */
-
-/* the hidden checkbox + the three-line menu button.
-   They only matter on small screens, so on desktop we hide them */
-
-.menu-toggle {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.menu-button {
-    display: none;
-}
-
+ 
+ 
+/* =====================================================
+   RESPONSIVE: SMALL LAPTOPS / IPAD LANDSCAPE (1025px to 1280px)
+   ===================================================== */
+ 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .investors-title   { font-size: max(0.875vw, 11px); }
-    .faq-answer        { font-size: max(0.99vw, 13px); }
-    .footer-col a      { font-size: max(0.885vw, 12px); }
-    .footer-legal p    { font-size: max(0.964vw, 12px); }
-    .footer-address    { font-size: max(0.885vw, 12px); }
+    .investors-title { font-size: max(0.875vw, 11px); }
+    .faq-answer      { font-size: max(0.99vw, 13px); }
+    .footer-col a    { font-size: max(0.885vw, 12px); }
+    .footer-legal p  { font-size: max(0.964vw, 12px); }
+    .footer-address  { font-size: max(0.885vw, 12px); }
 }
-
+ 
+ 
+/* =====================================================
+   RESPONSIVE: TABLETS (1024px and below)
+   ===================================================== */
+ 
 @media (max-width: 1024px) {
  
-    /* ---------- NAVBAR with a menu button ---------- */
+    /* NAVBAR with menu button */
  
     .navbar {
         height: auto;
@@ -1984,11 +1750,10 @@ footer.footer {
         gap: 0;
         padding: 16px 24px;
     }
-
+ 
     .brand-icon { height: 22px; }
     .brand-text { font-size: 32px; }
  
-
     .menu-button {
         display: flex;
         flex-direction: column;
@@ -1997,7 +1762,7 @@ footer.footer {
         padding: 10px;
         cursor: pointer;
     }
-
+ 
     .menu-button span {
         display: block;
         width: 24px;
@@ -2005,13 +1770,11 @@ footer.footer {
         background: #0b0a14;
         transition: transform 0.25s ease, opacity 0.25s ease;
     }
-
-
+ 
     .menu-toggle:checked ~ .menu-button span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .menu-toggle:checked ~ .menu-button span:nth-child(2) { opacity: 0; }
     .menu-toggle:checked ~ .menu-button span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-
+ 
     .switch,
     .nav-links,
     .actions {
@@ -2073,7 +1836,7 @@ footer.footer {
     .icon { width: 18px; height: 18px; }
     .upwork-dot { width: 18px; height: 18px; font-size: 8px; }
     .drop-title { font-size: 15px; line-height: 22px; }
-
+ 
     .dropdown-lang,
     .has-dropdown:hover .dropdown-lang {
         display: none;
@@ -2092,6 +1855,9 @@ footer.footer {
     }
  
     .btn-outline { margin-right: 0; }
+ 
+ 
+    /* HERO */
  
     .hero {
         height: auto;
@@ -2141,10 +1907,9 @@ footer.footer {
     .store-icons { gap: 8px; }
     .store-icon { width: 18px; height: 18px; }
     .store-divider { height: 18px; }
-
+ 
     .qr-card { display: none; }
-
-
+ 
     .hero-photo {
         position: relative;
         display: block;
@@ -2154,7 +1919,7 @@ footer.footer {
         height: auto;
         margin-top: 32px;
     }
-
+ 
     .hero-ui {
         top: auto;
         left: auto;
@@ -2163,7 +1928,9 @@ footer.footer {
         width: min(46vw, 300px);
         border-radius: 14px;
     }
-
+ 
+ 
+    /* INVESTORS */
  
     .investors { padding: 40px 24px 0; }
  
@@ -2180,13 +1947,15 @@ footer.footer {
         margin-top: 24px;
     }
  
-    .logo-qed      { width: 56px; }
-    .logo-google   { width: 96px; }
-    .logo-vp       { width: 100px; }
-    .logo-techstars{ width: 120px; }
-    .logo-seedstars{ width: 100px; }
-    .logo-norrsken { width: 56px; }
-
+    .logo-qed       { width: 56px; }
+    .logo-google    { width: 96px; }
+    .logo-vp        { width: 100px; }
+    .logo-techstars { width: 120px; }
+    .logo-seedstars { width: 100px; }
+    .logo-norrsken  { width: 56px; }
+ 
+ 
+    /* REVIEWS */
  
     .reviews { padding: 72px 24px 56px; }
  
@@ -2200,7 +1969,7 @@ footer.footer {
         margin-top: 12px;
         font-size: 18px;
     }
-
+ 
     .reviews-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: none;
@@ -2250,12 +2019,14 @@ footer.footer {
     .store-rating img { height: 20px; }
  
  
+    /* STACKED CARDS */
+ 
     .slide {
         height: 100vh;
         height: 100svh;
         min-height: 600px;
     }
-
+ 
     .slide::after {
         content: "";
         position: absolute;
@@ -2310,7 +2081,9 @@ footer.footer {
     }
  
     .slide-link svg { width: 22px; height: 22px; }
-
+ 
+ 
+    /* RAENEST FOR EVERYONE */
  
     .everyone { padding: 56px 0 64px 24px; }
  
@@ -2343,8 +2116,7 @@ footer.footer {
     .who-view { margin-top: 28px; }
  
     .who-track { gap: 12px; }
-
-
+ 
     .who-card {
         flex: 0 0 calc(100vw - 48px);
         height: 440px;
@@ -2366,7 +2138,9 @@ footer.footer {
     #who3:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 36px) * -2)); }
     #who4:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 36px) * -3)); }
     #who5:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 36px) * -4)); }
-
+ 
+ 
+    /* RAENEST FOR BUSINESS */
  
     .business { padding: 24px 24px 56px; }
  
@@ -2394,8 +2168,7 @@ footer.footer {
     }
  
  
-    /*    YOUR MONEY, WHEREVER YOU NEED IT 
-       The phone and the two small cards are placed with numbers that scale together.*/
+    /* YOUR MONEY, WHEREVER YOU NEED IT */
  
     .everywhere {
         --k: 1.1;
@@ -2433,7 +2206,9 @@ footer.footer {
         width: calc(12.5vw * var(--k));
         border-radius: 12px;
     }
-
+ 
+ 
+    /* LOGOS + THREE PHOTO CARDS */
  
     .creators {
         --u: 14.4px;
@@ -2447,7 +2222,6 @@ footer.footer {
         overflow: hidden;
     }
  
-
     .fan {
         position: relative;
         top: auto;
@@ -2484,7 +2258,9 @@ footer.footer {
  
     .logos img { width: min(130px, 100%); }
  
-
+ 
+    /* ROTATING WORDS */
+ 
     .roles {
         --role-h: 64px;
         padding: 48px 24px 72px;
@@ -2516,9 +2292,8 @@ footer.footer {
         line-height: 1.6;
     }
  
-    /* ---------- 3 EASY STEPS ----------
-       The pictures inside each card are placed with % 
-       so they follow the card when the card gets narrower or wider to fit the screen */
+ 
+    /* GET PAID GLOBALLY IN 3 EASY STEPS */
  
     .steps { padding: 56px 0 64px; }
  
@@ -2566,6 +2341,8 @@ footer.footer {
     .step-title { font-size: 16px; line-height: 1.3; }
     .step-text  { width: auto; margin-top: 8px; font-size: 13px; line-height: 1.55; }
  
+ 
+    /* BLOG, NEWSLETTER, PRESS */
  
     .blog { padding: 64px 0 56px; }
  
@@ -2663,6 +2440,8 @@ footer.footer {
     .logo-finextra   { width: 130px; }
  
  
+    /* FAQ */
+ 
     .faq {
         display: block;
         padding: 56px 24px 80px;
@@ -2702,6 +2481,8 @@ footer.footer {
  
     .faq-answer p + p { margin-top: 12px; }
  
+ 
+    /* FOOTER */
  
     .footer-wave {
         top: auto;
@@ -2756,14 +2537,18 @@ footer.footer {
     .footer-legal p { margin-bottom: 14px; font-size: 12px; line-height: 1.6; }
 }
  
-
-   /* PHONES (640px and below) */
-
+ 
+/* =====================================================
+   RESPONSIVE: PHONES (640px and below)
+   ===================================================== */
+ 
 @media (max-width: 640px) {
  
     .navbar { padding: 14px 16px; }
     .brand-text { font-size: 28px; }
-
+ 
+ 
+    /* HERO */
  
     .hero-content { padding: 32px 20px 0; }
  
@@ -2776,8 +2561,7 @@ footer.footer {
     }
  
     .hero-text { font-size: 16px; }
-
-
+ 
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
@@ -2794,16 +2578,21 @@ footer.footer {
         width: 52vw;
     }
  
+ 
+    /* INVESTORS */
+ 
     .investors { padding: 32px 20px 0; }
     .investors-logos { gap: 16px 24px; }
  
-    .logo-qed      { width: 44px; }
-    .logo-google   { width: 76px; }
-    .logo-vp       { width: 82px; }
-    .logo-techstars{ width: 96px; }
-    .logo-seedstars{ width: 80px; }
-    .logo-norrsken { width: 44px; }
+    .logo-qed       { width: 44px; }
+    .logo-google    { width: 76px; }
+    .logo-vp        { width: 82px; }
+    .logo-techstars { width: 96px; }
+    .logo-seedstars { width: 80px; }
+    .logo-norrsken  { width: 44px; }
  
+ 
+    /* REVIEWS */
  
     .reviews { padding: 56px 16px 48px; }
  
@@ -2815,7 +2604,9 @@ footer.footer {
     .video-box { aspect-ratio: 4 / 3; }
  
     .store-rating { font-size: 14px; }
-
+ 
+ 
+    /* STACKED CARDS */
  
     .slide .slide-label {
         top: 24px;
@@ -2839,6 +2630,9 @@ footer.footer {
     .slide-para  { font-size: 15px; line-height: 1.55; }
     .slide-link  { font-size: 15px; margin-top: 12px; }
  
+ 
+    /* RAENEST FOR EVERYONE */
+ 
     .everyone { padding: 48px 0 56px 16px; }
     .everyone-top { margin-right: 16px; }
     .everyone-title { font-size: 28px; }
@@ -2856,7 +2650,9 @@ footer.footer {
     #who3:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 20px) * -2)); }
     #who4:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 20px) * -3)); }
     #who5:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 20px) * -4)); }
-
+ 
+ 
+    /* RAENEST FOR BUSINESS */
  
     .business { padding: 16px 16px 48px; }
  
@@ -2869,6 +2665,9 @@ footer.footer {
     .business-title { font-size: 32px; }
     .business-text  { font-size: 15px; }
  
+ 
+    /* YOUR MONEY, WHEREVER YOU NEED IT */
+ 
     .everywhere {
         --k: 1.5;
         --s: 300px;
@@ -2878,11 +2677,14 @@ footer.footer {
     .everywhere-title { font-size: 34px; }
     .everywhere-text  { margin-top: 14px; font-size: 15px; }
  
+ 
+    /* LOGOS + THREE PHOTO CARDS */
+ 
     .creators {
         --u: 11px;
         padding: 40px 16px;
     }
-
+ 
     .logos,
     .logos-left,
     .logos-right {
@@ -2894,7 +2696,7 @@ footer.footer {
     .logos img { width: min(100px, 90%); }
  
  
-    /* ---------- ROTATING WORDS ---------- */
+    /* ROTATING WORDS */
  
     .roles {
         --role-h: 44px;
@@ -2904,7 +2706,7 @@ footer.footer {
     .roles-text { font-size: 20px; }
  
  
-    /* ---------- 3 EASY STEPS: one card per row ---------- */
+    /* GET PAID GLOBALLY IN 3 EASY STEPS */
  
     .steps { padding: 48px 0 56px; }
  
@@ -2924,7 +2726,9 @@ footer.footer {
     .step-text  { font-size: 15px; }
  
  
-    .blog { padding: 48px 0 48px; }
+    /* BLOG, NEWSLETTER, PRESS */
+ 
+    .blog { padding: 48px 0; }
  
     .blog-heading { font-size: 24px; }
  
@@ -2943,7 +2747,7 @@ footer.footer {
     .blog-arrow svg { width: 22px; height: 22px; }
  
     .blog-line { margin: 28px 20px 0; }
-
+ 
     .newsletter {
         flex-direction: column;
         align-items: stretch;
@@ -2966,7 +2770,9 @@ footer.footer {
     .logo-techcrunch { width: 82px; }
     .logo-condia     { width: 82px; }
     .logo-finextra   { width: 96px; }
-
+ 
+ 
+    /* FAQ */
  
     .faq { padding: 48px 20px 64px; }
     .faq-title { font-size: 24px; }
@@ -2974,8 +2780,10 @@ footer.footer {
     .faq-answer { font-size: 14px; }
  
  
+    /* FOOTER */
+ 
     .footer-inner { padding: 48px 20px 40px; }
-
+ 
     .footer-cols {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px 16px;
