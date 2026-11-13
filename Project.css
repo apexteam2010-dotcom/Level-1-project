@@ -33,8 +33,6 @@ ul {
 }
  
  
-/* NAVBAR */
- 
 .site-header {
     position: relative;
     z-index: 50;
@@ -106,8 +104,6 @@ ul {
     letter-spacing: -0.02em;
 }
  
- 
-/* DROPDOWNS (Products, Earn and English) */
  
 .has-dropdown {
     position: relative;
@@ -245,9 +241,6 @@ ul {
     font-weight: 700;
 }
  
- 
-/* RIGHT SIDE OF THE NAVBAR (language, Login, Create an account) */
- 
 .actions {
     display: flex;
     align-items: center;
@@ -306,8 +299,6 @@ ul {
     border-color: #4233c0;
 }
  
- 
-/* HERO */
  
 .hero {
     position: relative;
@@ -480,10 +471,10 @@ ul {
 .hero-photo {
     position: absolute;
     z-index: 1;
-    top: -1.30vw;
-    right: -9.100vw;
-    width: 80vw;
-    height: 145vh;
+    top: 1.30vw;
+    right: -5.100vw;
+    width: 70vw;
+    height: 140vh;
 }
  
 .hero-ui {
@@ -494,11 +485,8 @@ ul {
     width: 21vw;
     border-radius: 1.5vw;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
  
- 
-/* INVESTORS */
  
 .investors {
     padding: 3.802vw 7.135vw 0;
@@ -546,7 +534,6 @@ ul {
 }
  
  
-/* REVIEWS */
  
 .reviews {
     padding: 15.208vw 0 6.25vw;
@@ -735,8 +722,7 @@ ul {
     height: 1.302vw;
 }
  
- 
-/* STACKED CARDS (Receive money, Global accounts, Cards, Send money, Earn) */
+
  
 .slide {
     position: sticky;
@@ -823,8 +809,6 @@ ul {
  
 .slide-earn .slide-text    { left: 58.021vw; top: 27.344vw; width: 23.438vw; }
  
- 
-/* RAENEST FOR EVERYONE (tabs + sliding cards) */
  
 .everyone {
     position: relative;
@@ -969,8 +953,6 @@ ul {
 }
  
  
-/* RAENEST FOR BUSINESS */
- 
 .business {
     padding: 2.5vw 8.385vw 4.948vw;
 }
@@ -1032,8 +1014,6 @@ ul {
 }
  
  
-/* YOUR MONEY, WHEREVER YOU NEED IT */
- 
 .everywhere {
     position: relative;
     height: 70.052vw;
@@ -1092,9 +1072,6 @@ ul {
     width: 12.5vw;
 }
  
- 
-/* LOGOS + THREE PHOTO CARDS */
- 
 .creators {
     position: relative;
     height: 28.125vw;
@@ -1143,8 +1120,7 @@ ul {
 .fan:hover .fan-middle { transform: translate(0.104vw, 0vw) rotate(-6deg); }
 .fan:hover .fan-front  { transform: translate(9.115vw, 1.875vw) rotate(9deg); }
  
- 
-/* ROTATING WORDS (Designers, Marketers...) */
+
  
 .roles {
     padding-bottom: 8.333vw;
@@ -1200,8 +1176,6 @@ ul {
     color: #1f1c19;
 }
  
- 
-/* GET PAID GLOBALLY IN 3 EASY STEPS */
  
 .steps {
     padding-bottom: 7.135vw;
@@ -1307,8 +1281,6 @@ ul {
     letter-spacing: -0.045em;
 }
  
- 
-/* THE LATEST FROM RAENEST (blog cards, newsletter, press logos) */
  
 .blog {
     padding: 6.51vw 0 5.208vw;
@@ -1484,8 +1456,7 @@ ul {
 .logo-condia     { width: 8.49vw; }
 .logo-finextra   { width: 9.583vw; }
  
- 
-/* FREQUENTLY ASKED QUESTIONS */
+
  
 .faq {
     display: flex;
@@ -1569,8 +1540,7 @@ ul {
     text-decoration: underline;
 }
  
- 
-/* FOOTER */
+
  
 .footer {
     position: relative;
@@ -1723,9 +1693,7 @@ ul {
 }
  
  
-/* =====================================================
-   RESPONSIVE: SMALL LAPTOPS / IPAD LANDSCAPE (1025px to 1280px)
-   ===================================================== */
+/* RESPONSIVE: SMALL LAPTOPS / IPAD LANDSCAPE (1025px to 1280px)*/
  
 @media (min-width: 1025px) and (max-width: 1280px) {
     .investors-title { font-size: max(0.875vw, 11px); }
@@ -1736,9 +1704,7 @@ ul {
 }
  
  
-/* =====================================================
-   RESPONSIVE: TABLETS (1024px and below)
-   ===================================================== */
+/* RESPONSIVE: TABLETS (1024px and below) */
  
 @media (max-width: 1024px) {
  
@@ -1857,8 +1823,6 @@ ul {
     .btn-outline { margin-right: 0; }
  
  
-    /* HERO */
- 
     .hero {
         height: auto;
     }
@@ -1929,9 +1893,6 @@ ul {
         border-radius: 14px;
     }
  
- 
-    /* INVESTORS */
- 
     .investors { padding: 40px 24px 0; }
  
     .investors-title {
@@ -1954,8 +1915,6 @@ ul {
     .logo-seedstars { width: 100px; }
     .logo-norrsken  { width: 56px; }
  
- 
-    /* REVIEWS */
  
     .reviews { padding: 72px 24px 56px; }
  
@@ -2019,8 +1978,6 @@ ul {
     .store-rating img { height: 20px; }
  
  
-    /* STACKED CARDS */
- 
     .slide {
         height: 100vh;
         height: 100svh;
@@ -2083,8 +2040,6 @@ ul {
     .slide-link svg { width: 22px; height: 22px; }
  
  
-    /* RAENEST FOR EVERYONE */
- 
     .everyone { padding: 56px 0 64px 24px; }
  
     .everyone-top {
@@ -2140,8 +2095,6 @@ ul {
     #who5:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 36px) * -4)); }
  
  
-    /* RAENEST FOR BUSINESS */
- 
     .business { padding: 24px 24px 56px; }
  
     .business-card {
@@ -2166,9 +2119,6 @@ ul {
         border-radius: 14px;
         font-size: 16px;
     }
- 
- 
-    /* YOUR MONEY, WHEREVER YOU NEED IT */
  
     .everywhere {
         --k: 1.1;
@@ -2206,9 +2156,6 @@ ul {
         width: calc(12.5vw * var(--k));
         border-radius: 12px;
     }
- 
- 
-    /* LOGOS + THREE PHOTO CARDS */
  
     .creators {
         --u: 14.4px;
@@ -2258,9 +2205,6 @@ ul {
  
     .logos img { width: min(130px, 100%); }
  
- 
-    /* ROTATING WORDS */
- 
     .roles {
         --role-h: 64px;
         padding: 48px 24px 72px;
@@ -2291,9 +2235,6 @@ ul {
         font-size: 15px;
         line-height: 1.6;
     }
- 
- 
-    /* GET PAID GLOBALLY IN 3 EASY STEPS */
  
     .steps { padding: 56px 0 64px; }
  
@@ -2440,8 +2381,6 @@ ul {
     .logo-finextra   { width: 130px; }
  
  
-    /* FAQ */
- 
     .faq {
         display: block;
         padding: 56px 24px 80px;
@@ -2482,7 +2421,6 @@ ul {
     .faq-answer p + p { margin-top: 12px; }
  
  
-    /* FOOTER */
  
     .footer-wave {
         top: auto;
@@ -2537,10 +2475,7 @@ ul {
     .footer-legal p { margin-bottom: 14px; font-size: 12px; line-height: 1.6; }
 }
  
- 
-/* =====================================================
-   RESPONSIVE: PHONES (640px and below)
-   ===================================================== */
+/* RESPONSIVE: PHONES (640px and below) */
  
 @media (max-width: 640px) {
  
@@ -2548,7 +2483,6 @@ ul {
     .brand-text { font-size: 28px; }
  
  
-    /* HERO */
  
     .hero-content { padding: 32px 20px 0; }
  
@@ -2579,7 +2513,6 @@ ul {
     }
  
  
-    /* INVESTORS */
  
     .investors { padding: 32px 20px 0; }
     .investors-logos { gap: 16px 24px; }
@@ -2592,7 +2525,6 @@ ul {
     .logo-norrsken  { width: 44px; }
  
  
-    /* REVIEWS */
  
     .reviews { padding: 56px 16px 48px; }
  
@@ -2606,7 +2538,6 @@ ul {
     .store-rating { font-size: 14px; }
  
  
-    /* STACKED CARDS */
  
     .slide .slide-label {
         top: 24px;
@@ -2631,7 +2562,6 @@ ul {
     .slide-link  { font-size: 15px; margin-top: 12px; }
  
  
-    /* RAENEST FOR EVERYONE */
  
     .everyone { padding: 48px 0 56px 16px; }
     .everyone-top { margin-right: 16px; }
@@ -2651,8 +2581,7 @@ ul {
     #who4:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 20px) * -3)); }
     #who5:checked ~ .who-view .who-track { transform: translateX(calc((100vw - 20px) * -4)); }
  
- 
-    /* RAENEST FOR BUSINESS */
+
  
     .business { padding: 16px 16px 48px; }
  
@@ -2666,7 +2595,6 @@ ul {
     .business-text  { font-size: 15px; }
  
  
-    /* YOUR MONEY, WHEREVER YOU NEED IT */
  
     .everywhere {
         --k: 1.5;
@@ -2678,7 +2606,6 @@ ul {
     .everywhere-text  { margin-top: 14px; font-size: 15px; }
  
  
-    /* LOGOS + THREE PHOTO CARDS */
  
     .creators {
         --u: 11px;
@@ -2696,7 +2623,6 @@ ul {
     .logos img { width: min(100px, 90%); }
  
  
-    /* ROTATING WORDS */
  
     .roles {
         --role-h: 44px;
@@ -2706,7 +2632,6 @@ ul {
     .roles-text { font-size: 20px; }
  
  
-    /* GET PAID GLOBALLY IN 3 EASY STEPS */
  
     .steps { padding: 48px 0 56px; }
  
@@ -2725,8 +2650,6 @@ ul {
     .step-title { font-size: 20px; }
     .step-text  { font-size: 15px; }
  
- 
-    /* BLOG, NEWSLETTER, PRESS */
  
     .blog { padding: 48px 0; }
  
@@ -2772,15 +2695,11 @@ ul {
     .logo-finextra   { width: 96px; }
  
  
-    /* FAQ */
- 
     .faq { padding: 48px 20px 64px; }
     .faq-title { font-size: 24px; }
     .faq-item summary { font-size: 16px; }
     .faq-answer { font-size: 14px; }
  
- 
-    /* FOOTER */
  
     .footer-inner { padding: 48px 20px 40px; }
  
